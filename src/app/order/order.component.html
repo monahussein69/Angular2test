@@ -1,0 +1,76 @@
+<div class="container">
+<div class="card">
+  <div class="card-header">
+    متابعه الطلب
+  </div>
+  <div class="card-block">
+   <div class="row">
+     <div class="col-md-12 mt-5">
+
+       <div class="stepwizard offset-md-3">
+         <div class="stepwizard-row setup-panel">
+           <div class="stepwizard-step active">
+             <a href="#step-1"  class="btn btn-circle">1</a>
+             <p>معلق</p>
+           </div>
+           <div class="stepwizard-step">
+             <a href="#step-2"  class="btn btn-default btn-circle">2</a>
+             <p>بالطريق</p>
+           </div>
+           <div class="stepwizard-step ">
+             <a href="#step-3" class="btn btn-default btn-circle" disabled="disabled">3</a>
+             <p>وصل</p>
+           </div>
+
+           <div class="stepwizard-step">
+             <a href="#step-4" class="btn btn-default btn-circle" disabled="disabled">4</a>
+             <p>يعمل</p>
+           </div>
+
+           <div class="stepwizard-step">
+             <a href="#step-5"  class="btn btn-default btn-circle" disabled="disabled">5</a>
+             <p>مكتمل</p>
+           </div>
+         </div>
+       </div>
+
+     </div>
+     <div class="col-md-12">
+       <div class="row">
+         <div class="col-md-4 offset-md-2 right-align">
+           <img src="../../assets/images/default.png"  class="rounded-circle" alt="Cinque Terre" width="200px">
+         </div>
+         <div class="col-md-4">
+           <div class="row center-align">
+             <div class="col-md-12 mb-2">مصطفى اشتر</div>
+             <div class="col-md-12 mb-2">
+               <star-rating-comp [starType]="'svg'" [rating]="2.63"></star-rating-comp>
+             </div>
+             <div class="col-md-12 mb-2">
+               <button class="btn btn-danger">الغاء</button>
+               <button class="btn btn-primary">اتصل بالاجير</button>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="col-md-12 mt-5">
+
+       <agm-map [latitude]="lat" [longitude]="lng" >
+
+
+
+         <agm-marker
+           [latitude]="latLocation"
+           [longitude]="lngLocation"
+         >
+
+         </agm-marker>
+       </agm-map>
+
+     </div>
+   </div>
+  </div>
+</div>
+</div>
+

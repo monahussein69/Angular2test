@@ -1,0 +1,54 @@
+<div class="container">
+  <div id="wrapper">
+    <div id="google_map">
+      <agm-map [latitude]="lat" [longitude]="lng" >
+
+        <agm-marker
+          [latitude]="currentlat"
+          [longitude]="currentlng"
+        >
+
+        </agm-marker>
+
+        <agm-marker
+          [latitude]="location_marker.lat"
+          [longitude]="location_marker.lng"
+          [markerDraggable]="location_marker.draggable"
+          (dragEnd)="markerDragEnd(location_marker, $event)"
+          [iconUrl]="location_marker.iconUrl"
+
+        >
+
+        </agm-marker>
+      </agm-map>
+    </div>
+
+    <div class="map_address over_map">
+      {{currentAddress}}
+    </div>
+    <a class="over_map btn btn-primary service_btn col-md-12" (click)="servicesPop.show()"> Select Services</a>
+
+    <app-modal #servicesPop>
+      <div class="app-modal-header">
+        Available Services
+      </div>
+      <div class="app-modal-body">
+        Please Select One Of these services
+
+        <div *ngFor="let service of services">
+          <label for="{{service.name}}">
+            <input id="{{service.name}}" [value]='service.name' type="radio" name="services">
+            {{service.name}}
+          </label>
+        </div>
+
+      </div>
+      <div class="app-modal-footer">
+        <button type="button" class="btn btn-default" (click)="servicesPop.hide()">Close</button>
+        <a type="button" class="btn btn-primary" [routerLink] = "['/Order']">Save</a>
+      </div>
+    </app-modal>
+
+  </div>
+</div>
+

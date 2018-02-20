@@ -1,0 +1,20 @@
+agm-map {
+  height: 300px;
+}
+
+.over_map{
+  position: absolute;left: 0px; z-index: 99;right:0px;
+}
+.map_address {
+  background-color: rgba(255,255,255,0.9);
+  padding: 12px 12px;
+  text-align: center;
+  color: rgb(169, 178, 177);
+  top: 0px;
+}
+.service_btn{
+  bottom:0px;
+  background-color:rgb(44, 100, 127);
+}
+#wrapper { position: relative; }
+
