@@ -4,7 +4,9 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 
 ## Development server
 Run 'npm install' to install node modules
+
 Run npm install bootstrap@4.0.0-alpha.6 --save
+
 Run npm install angularfire2@5.0.0-rc.3 --save
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
